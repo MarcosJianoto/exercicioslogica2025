@@ -26,8 +26,6 @@ public class NumeroPerfeitoNvalue {
 			numberInteger++;
 			numberSum = 0L;
 			
-			System.out.println("teste");
-
 		}
 
 	}
