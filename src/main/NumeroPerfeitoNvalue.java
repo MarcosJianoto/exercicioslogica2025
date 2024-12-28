@@ -4,29 +4,23 @@ public class NumeroPerfeitoNvalue {
 
 	public static void main(String[] args) {
 
-		// descobrir até o n-ézimo numero.
-		Long numberInteger = 33550336L;
+		Integer number = 10;
+		Integer numberAlter = number;
+		Integer soma = 0;
+		Integer valueInteger = 0;
 
-		Long numberSum = 0L;
+		for (int i = number; i > 1; i--) {
 
-		while (true) {
+			soma = i - 1;
 
-			for (int i = 1; i < numberInteger; i++) {
-
-				if (numberInteger % i == 0) {
-					numberSum += i;
-				}
-
+			if (i == number) {
+				valueInteger += numberAlter * soma;
+			} else {
+				valueInteger += valueInteger * (soma - 1);
 			}
-
-			if (numberSum.equals(numberInteger)) {
-				System.out.println(numberInteger + " numero perfeito");
-			}
-
-			numberInteger++;
-			numberSum = 0L;
-			
 		}
+
+		System.out.println(valueInteger);
 
 	}
 
