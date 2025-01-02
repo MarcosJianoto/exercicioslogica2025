@@ -4,15 +4,22 @@ public class SomaImparesDe1a1000 {
 
 	public static void main(String[] args) {
 
-		Integer sumInteger = 0;
+		String numberString = "555";
+		Integer[] arraynumero = new Integer[numberString.length()];
 
-		for (int i = 0; i < 1000; i++) {
-			if (i % 2 != 0) {
-				sumInteger += i;
-			}
+		for (int i = 0; i < numberString.length(); i++) {
+			arraynumero[i] = Character.getNumericValue(numberString.charAt(i));
 		}
-		System.out.println(sumInteger);
+
+		
+		Integer sum = 0;
+
+		for (Integer numInteger : arraynumero) {
+			sum+= numInteger;
+		}
+		
+		System.out.println(sum);
+		
 
 	}
-
 }
